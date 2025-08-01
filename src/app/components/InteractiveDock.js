@@ -40,6 +40,7 @@ export default function InteractiveDock() {
       panelHeight={68}
       baseItemSize={50}
       magnification={70}
+      className="bg-gray-800/50 backdrop-blur-lg"
     />
   );
 }

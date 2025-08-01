@@ -93,7 +93,7 @@ const Skill = () => {
           <motion.div
             className="bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-white/10 p-8 shadow-xl"
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 }:{}}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center mb-8">
@@ -237,8 +237,9 @@ const Skill = () => {
                   alt={tool.name}
                   width={60}
                   height={60}
-                  className="mb-2"
+                  className="mb-2 transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg hover:shadow-blue-400/40"
                 />
+
                 <p className="text-white text-sm">{tool.name}</p>
               </div>
             ))}
