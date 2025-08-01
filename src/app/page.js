@@ -44,13 +44,13 @@ export default function Page() {
 
   return (
     <>
-      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900  text-white overflow-hidden">
         {/* Enhanced Animated Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-20 right-10 md:right-20 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-[70px] md:blur-[100px] animate-pulse-slow"></div>
           <div className="absolute bottom-10 left-10 md:bottom-20 md:left-20 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-[70px] md:blur-[100px] animate-pulse-slow animation-delay-2000"></div>
           <div className="absolute top-1/3 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse-slow animation-delay-4000"></div>
-
+            <div className="absolute bottom-0 right-1/3 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-[90px] md:blur-[120px] animate-pulse-slow animation-delay-[6000ms]"></div>
           {/* Subtle Grid Pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwMyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+')] opacity-10"></div>
         </div>
