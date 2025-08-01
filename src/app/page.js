@@ -244,9 +244,9 @@ export default function Page() {
                             Thesis Title:
                           </h4>
                           <p className="text-white/90 text-base md:text-lg italic">
-                            "The Influence of Accounting Teachers' Welfare on
+                            &quot;The Influence of Accounting Teachers&apos; Welfare on
                             Teaching Performance: The Moderating Role of Work
-                            Motivation"
+                            Motivation&quot;
                           </p>
                         </div>
 

@@ -1,19 +1,28 @@
 // components/Home.js
 "use client";
 
-
 import ProfileCard from "../ReactBits/ProfileCard";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-
+import { useRef } from "react";
 export default function Home() {
+  // Tambahkan ref dan hook scroll
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
+  // Percepat animasi dengan mengalikan nilai scroll (4x lebih cepat)
+  const yFast = useTransform(scrollYProgress, [0, 1], [0, 800]);
+  const yMedium = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
-    <section className="min-h-screen bg-transparent text-white flex items-center justify-center px-4 sm:px-6 relative overflow-hidden">
-      {/* Animated background elements */}
-
+    <section
+      ref={ref} // Attach ref ke section
+      className="min-h-screen bg-transparent text-white flex items-center justify-center px-4 sm:px-6 relative overflow-hidden"
+    >
       {/* Grid lines */}
       <div className="absolute inset-0 z-0 bg-[url('/assets/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]" />
 
@@ -23,6 +32,7 @@ export default function Home() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          style={{ y: yMedium }}
         >
           <motion.h2
             className="text-lg text-pink-400 mb-2 font-mono tracking-wider"
@@ -77,7 +87,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            I'm a fresh graduate from Universitas Negeri Semarang, Faculty of
+            I&apos;m a fresh graduate from Universitas Negeri Semarang, Faculty of
             Economics and Business, majoring in Accounting Education. During my
             studies, I gained a strong understanding of financial principles,
             accounting systems, and educational methodologies. I was actively
@@ -115,6 +125,7 @@ export default function Home() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ y: yMedium }}
           className="flex justify-center"
         >
           <ProfileCard
