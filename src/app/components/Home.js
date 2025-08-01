@@ -134,8 +134,9 @@ export default function Home() {
             handle="fitrotul01"
             avatarUrl="/assets/pipit.png"
             grainUrl="/assets/ppt.png"
+            showUserInfo={false}
+            behindGradient={false}
             showBehindGradient={false}
-            showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
             onContactClick={() => console.log("Contact clicked")}
