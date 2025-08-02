@@ -170,7 +170,10 @@ export default function Experienced() {
                 >
                   {exp.icon}
                 </div>
-
+                <div className="absolute top-10 left-10 md:top-16 md:left-24 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-[70px] md:blur-[100px] animate-pulse-slow"></div>
+                <div className="absolute top-1/2 right-10 md:right-24 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-[70px] md:blur-[100px] animate-pulse-slow animation-delay-[2000ms]"></div>
+                <div className="absolute bottom-16 left-1/3 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse-slow animation-delay-[4000ms]"></div>
+                <div className="absolute top-1/3 right-1/4 w-56 h-56 md:w-72 md:h-72 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-[90px] md:blur-[120px] animate-pulse-slow animation-delay-[6000ms]"></div>
                 {/* Content card */}
                 <div
                   className={`w-full md:w-5/12 p-6 rounded-xl shadow-xl backdrop-blur-sm ${
