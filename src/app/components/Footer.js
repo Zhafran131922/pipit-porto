@@ -1,5 +1,5 @@
 // components/Footer.js
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   FaLinkedinIn,
   FaInstagram,
@@ -7,16 +7,64 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaPaperPlane
 } from "react-icons/fa";
 
 const Footer = () => {
+  // Refs for the background elements
+  const blob1Ref = useRef(null);
+  const blob2Ref = useRef(null);
+  const blob3Ref = useRef(null);
+  
+  useEffect(() => {
+    let animationFrameId;
+    
+    const animateBlobs = () => {
+      if (!blob1Ref.current || !blob2Ref.current || !blob3Ref.current) return;
+      
+      const time = Date.now() * 0.0005;
+      
+      // Animate blob1 (blue)
+      const x1 = Math.sin(time * 0.7) * 30;
+      const y1 = Math.cos(time * 0.5) * 20;
+      blob1Ref.current.style.transform = `translate(${x1}px, ${y1}px)`;
+      
+      // Animate blob2 (purple)
+      const x2 = Math.sin(time * 0.8) * 40;
+      const y2 = Math.cos(time * 0.6) * 30;
+      blob2Ref.current.style.transform = `translate(${x2}px, ${y2}px)`;
+      
+      // Animate blob3 (cyan)
+      const x3 = Math.sin(time * 0.9) * 50;
+      const y3 = Math.cos(time * 0.7) * 40;
+      blob3Ref.current.style.transform = `translate(${x3}px, ${y3}px)`;
+      
+      animationFrameId = requestAnimationFrame(animateBlobs);
+    };
+    
+    // Start the animation
+    animationFrameId = requestAnimationFrame(animateBlobs);
+    
+    // Clean up on component unmount
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <div className="absolute top-10 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <div 
+          ref={blob1Ref}
+          className="absolute top-10 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl transition-all duration-700 ease-linear"
+        ></div>
+        <div 
+          ref={blob2Ref}
+          className="absolute bottom-20 right-1/4 w-72 h-72 bg-purple-500 rounded-full blur-3xl transition-all duration-700 ease-linear"
+        ></div>
+        <div 
+          ref={blob3Ref}
+          className="absolute top-1/2 left-1/3 w-96 h-96 bg-cyan-500 rounded-full blur-3xl transition-all duration-700 ease-linear"
+        ></div>
       </div>
 
       {/* Main content */}
@@ -29,8 +77,7 @@ const Footer = () => {
                 Get in Touch
               </h2>
               <p className="mt-4 text-gray-300 max-w-md">
-                Feel free to reach out for collaborations or just a friendly
-                hello
+                Feel free to reach out for collaborations or just a friendly hello
               </p>
             </div>
 
@@ -134,9 +181,9 @@ const Footer = () => {
                 </div>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-medium text-white hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-medium text-white hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
                 >
-                  Send Message
+                  <FaPaperPlane /> Send Message
                 </button>
               </form>
             </div>
@@ -177,7 +224,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
-              © 2025 Fitrotul Azizah. All rights reserved.
+              © {new Date().getFullYear()} Fitrotul Azizah. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">

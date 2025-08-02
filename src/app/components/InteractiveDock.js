@@ -1,6 +1,6 @@
 'use client';
 
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
+import { VscAccount, VscGlobe, VscSymbolColor, VscHeart } from "react-icons/vsc";
 import Dock from "../ReactBits/Dock";
 
 export default function InteractiveDock() {
@@ -13,22 +13,22 @@ export default function InteractiveDock() {
 
   const items = [
     {
-      icon: <VscHome size={18} />,
+      icon: <VscAccount size={18} />,
       label: "Introduction",
       onClick: () => scrollToSection("home"),
     },
     {
-      icon: <VscArchive size={18} />,
+      icon: <VscGlobe size={18} />,
       label: "Experience",
       onClick: () => scrollToSection("experience"),
     },
     {
-      icon: <VscAccount size={18} />,
+      icon: <VscSymbolColor size={18} />,
       label: "Skills",
       onClick: () => scrollToSection("skills"),
     },
     {
-      icon: <VscSettingsGear size={18} />,
+      icon: <VscHeart size={18} />,
       label: "Get in touch",
       onClick: () => scrollToSection("footer"),
     },
