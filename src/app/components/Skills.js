@@ -112,6 +112,7 @@ const Skill = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
+              ref={ref}
             >
               {hardSkills.map((skill, index) => (
                 <motion.div
@@ -131,7 +132,7 @@ const Skill = () => {
                       <motion.div
                         className="h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
                         initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
+                        animate={{ width: isInView ? `${skill.level}%` : 0 }}
                         transition={{
                           duration: 1,
                           delay: 0.3 + index * 0.1,
