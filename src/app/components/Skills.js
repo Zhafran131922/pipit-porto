@@ -85,8 +85,8 @@ const Skill = () => {
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Kombinasi keterampilan teknis dan interpersonal yang saya kembangkan
-            selama bertahun-tahun
+            A unique blend of technical expertise and interpersonal skills that
+            I&apos;ve honed over the years
           </p>
         </motion.div>
 
