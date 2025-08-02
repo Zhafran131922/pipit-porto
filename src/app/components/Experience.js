@@ -159,9 +159,10 @@ export default function Experienced() {
                 className={`relative flex ${
                   index % 2 === 0 ? "justify-start" : "justify-end"
                 }`}
-                variants={
-                  index % 2 === 0 ? itemVariantsLeft : itemVariantsRight
-                }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 {/* Timeline dot */}
                 <div
@@ -169,11 +170,6 @@ export default function Experienced() {
                 >
                   {exp.icon}
                 </div>
-                <div className="absolute top-10 left-10 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-[70px] md:blur-[100px] animate-pulse-slow animation-delay-2000"></div>
-
-                <div className="absolute top-1/4 right-10 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse-slow animation-delay-4000"></div>
-
-                <div className="absolute bottom-10 right-10 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-[90px] md:blur-[120px] animate-pulse-slow animation-delay-[6000ms]"></div>
 
                 {/* Content card */}
                 <div
@@ -206,9 +202,10 @@ export default function Experienced() {
                       <motion.div
                         className={`h-2 rounded-full ${exp.color}`}
                         initial={{ width: 0 }}
-                        animate={{ width: `${((index + 1) * 20, 100)}%` }}
+                        whileInView={{ width: "100%" }}
                         transition={{ duration: 1, delay: 0.3 }}
-                      ></motion.div>
+                        viewport={{ once: true }}
+                      />
                     </div>
                   </div>
                 </div>
