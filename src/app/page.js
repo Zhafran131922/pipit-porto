@@ -170,16 +170,16 @@ export default function Page() {
                           <div className="w-full md:w-40 bg-gray-700 rounded-full h-2.5 md:h-3">
                             <div
                               className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 md:h-3 rounded-full"
-                              style={{ width: "89.5%" }}
+                              style={{ width: "92%" }}
                             ></div>
                           </div>
                           <span className="mt-2 md:mt-0 md:ml-4 text-base md:text-lg font-bold text-white">
-                            GPA: 3.65 / 4.0
+                            GPA: 3.68 / 4.0
                           </span>
                         </div>
 
                         <p className="mt-3 text-white/80 text-base md:text-lg">
-                          2018 - 2022
+                          2021 - 2025
                         </p>
 
                         <div className="mt-6">
@@ -188,14 +188,21 @@ export default function Page() {
                           </h4>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                             {[
-                              "Financial Accounting",
+                              "Introduction to Financial Accounting",
                               "Managerial Accounting",
                               "Taxation",
                               "Auditing",
                               "Corporate Finance",
                               "Accounting Information Systems",
+                              "Educational Psychology",
+                              "Learning Media and Technology in Accounting",
+                              "Curriculum and Learning in Accounting",
                               "Business Ethics",
-                              "International Accounting",
+                              "Microteaching in Accounting",
+                              "Research Methodology in Education",
+                              "Practicum in Service, Trading, and Manufacturing Accounting",
+                              "Accounting Education Internship (PPL)",
+                              "Islamic Economics",
                             ].map((course, index) => (
                               <div
                                 key={index}
@@ -239,25 +246,29 @@ export default function Page() {
                           Business
                         </p>
                         <p className="mt-2 text-white/80 text-base md:text-lg">
-                          Jul 2024 – Present
+                          November 2024 – July 2025
                         </p>
                         <div className="mt-4">
                           <h4 className="text-lg md:text-xl font-semibold text-white mb-2">
                             Thesis Title:
                           </h4>
                           <p className="text-white/90 text-base md:text-lg italic">
-                            &quot;The Influence of Accounting Teachers&apos;
-                            Welfare on Teaching Performance: The Moderating Role
-                            of Work Motivation&quot;
+                            &quot;The Influence of Professional Perception and
+                            Teacher Welfare on the Interest in Becoming an
+                            Accounting Teacher with Self-Efficacy as a
+                            Moderating Variable among 2021 Accounting Education
+                            Students&quot;
                           </p>
                         </div>
 
                         <ul className="mt-5 space-y-2 md:space-y-3">
                           {[
-                            "Examines the correlation between teachers' economic well-being and their performance in delivering accounting education.",
-                            "Introduces work motivation as a moderating variable to analyze its impact on the primary relationship.",
-                            "Utilizes a quantitative research approach with statistical tools such as SEM-PLS for hypothesis testing.",
-                            "Provides recommendations for educational institutions to improve teacher satisfaction and student outcomes.",
+                            [
+                              "Examines the correlation between students' perception of the teaching profession and teacher welfare with their interest in becoming accounting teachers.",
+                              "Introduces self-efficacy as a moderating variable to analyze its influence on the relationship between perception, welfare, and career interest.",
+                              "Utilizes a quantitative research approach with statistical tools such as SEM-PLS for hypothesis testing.",
+                              "Provides recommendations for accounting education programs to enhance students' teaching motivation and professional readiness.",
+                            ],
                           ].map((item, index) => (
                             <li key={index} className="flex items-start">
                               <span className="text-purple-400 mt-1.5 mr-3">

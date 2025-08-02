@@ -53,7 +53,7 @@ const Footer = () => {
                 <div className="ml-4">
                   <h3 className="text-sm font-semibold text-gray-400">Email</h3>
                   <p className="mt-1 text-lg font-medium">
-                    fitrotul@gmail.com
+                    fitrotul018@gmail.com
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Footer = () => {
               <h3 className="text-xl font-semibold mb-6">Connect With Me</h3>
               <div className="flex space-x-6">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/fitrotul-azizah/?trk=opento_nprofile_details"
                   className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
                   aria-label="LinkedIn"
                 >
@@ -88,7 +88,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.instagram.com/fitrotul_01?utm_source=ig_web_button_share_sheet&igsh=MngxMWMwNG5qZ2Y3"
                   className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
                   aria-label="Instagram"
                 >
@@ -96,7 +96,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@pipitwle?is_from_webapp=1&sender_device=pc"
                   className="w-14 h-14 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 border border-gray-700"
                   aria-label="TikTok"
                 >

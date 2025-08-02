@@ -122,7 +122,7 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="mt-16 text-center text-gray-500 text-sm"
         >
-          <p>Still lost? Contact support at fitrotul@gmail.com</p>
+          <p>Still lost? Contact support at fitrotul018@gmail.com</p>
         </motion.div>
       </div>
 

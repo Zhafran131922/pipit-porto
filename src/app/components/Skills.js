@@ -11,33 +11,35 @@ const Skill = () => {
 
   // Data hard skills dengan level penguasaan
   const hardSkills = [
-    { name: "JavaScript", level: 90, icon: "💻" },
-    { name: "React.js", level: 85, icon: "⚛️" },
-    { name: "Node.js", level: 80, icon: "🟢" },
-    { name: "UI/UX Design", level: 75, icon: "🎨" },
-    { name: "Tailwind CSS", level: 95, icon: "🌀" },
-    { name: "Next.js", level: 88, icon: "⏭️" },
-    { name: "TypeScript", level: 82, icon: "📝" },
-    { name: "GraphQL", level: 70, icon: "📊" },
+    { name: "CapCut", level: 90, icon: "🎬" },
+    { name: "Canva", level: 95, icon: "🎨" },
+    { name: "CorelDRAW", level: 80, icon: "🖌️" },
+    { name: "Adobe Photoshop", level: 85, icon: "📷" },
+    { name: "Microsoft Word", level: 95, icon: "📝" },
+    { name: "Microsoft Excel", level: 90, icon: "📊" },
+    { name: "TikTok Ads Manager", level: 78, icon: "📱" },
+    { name: "Meta Business Suite", level: 82, icon: "📈" },
   ];
 
   // Data soft skills
   const softSkills = [
-    { name: "Komunikasi", level: "Expert" },
-    { name: "Kerja Tim", level: "Advanced" },
-    { name: "Manajemen Waktu", level: "Expert" },
-    { name: "Pemecahan Masalah", level: "Advanced" },
-    { name: "Adaptabilitas", level: "Expert" },
-    { name: "Kepemimpinan", level: "Intermediate" },
-    { name: "Kreativitas", level: "Advanced" },
-    { name: "Manajemen Proyek", level: "Intermediate" },
+    { name: "Communication", level: "Expert" },
+    { name: "Teamwork", level: "Advanced" },
+    { name: "Time Management", level: "Expert" },
+    { name: "Problem Solving", level: "Advanced" },
+    { name: "Adaptability", level: "Expert" },
+    { name: "Leadership", level: "Advanced" },
+    { name: "Creativity", level: "Advanced" },
+    { name: "Project Management", level: "Intermediate" },
+    { name: "Negotiation Skills", level: "Expert" },
+    { name: "English Proficiency", level: "Intermediate" },
   ];
 
   const tools = [
     { name: "MS Word", img: "/assets/skills/word.png" },
-    { name: "MS Excel", img: "/assets/skills/excel.png" },
     { name: "CorelDRAW", img: "/assets/skills/corel.png" },
     { name: "Photoshop", img: "/assets/skills/photoshop.png" },
+    { name: "Capcut", img: "/assets/skills/capcut.png" },
     { name: "Canva", img: "/assets/skills/canva.png" },
   ];
 
@@ -145,22 +147,22 @@ const Skill = () => {
 
           {/* Soft Skills Section */}
           <motion.div
-            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-white/10 p-8 shadow-xl"
+            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-xl"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView && { opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-2xl">
+            <div className="flex items-center mb-6 sm:mb-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-xl sm:text-2xl">
                 👥
               </div>
-              <h3 className="text-2xl font-bold ml-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+              <h3 className="text-xl sm:text-2xl font-bold ml-3 sm:ml-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
                 Soft Skills
               </h3>
             </div>
 
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -170,7 +172,7 @@ const Skill = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
-                  className={`p-4 rounded-xl ${
+                  className={`p-4 rounded-xl text-sm sm:text-base ${
                     skill.level === "Expert"
                       ? "bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20"
                       : skill.level === "Advanced"

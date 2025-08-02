@@ -5,39 +5,91 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Frontend Developer",
-    description: "Membangun UI responsif menggunakan React dan Tailwind CSS.",
-    duration: "Jan 2023 - Mei 2024",
-    icon: "💻",
-    color: "bg-blue-500",
+    title: "Economics Tutor at BBT & Genius Class",
+    description:
+      "Guided students in understanding economics material and preparing for the TKA Soshum exam.",
+    duration: "Nov 2024 - Present",
+    icon: "📘",
+    color: "bg-blue-600",
   },
   {
-    title: "UI/UX Designer",
-    description: "Merancang alur pengguna dan wireframe aplikasi mobile.",
-    duration: "Agu 2022 - Des 2022",
-    icon: "🎨",
-    color: "bg-purple-500",
+    title: "Teaching Intern at SMKN 2 Semarang",
+    description:
+      "Taught accounting subjects, prepared learning modules, and assisted with student administration tasks.",
+    duration: "Sep 2024 - Oct 2024",
+    icon: "🏫",
+    color: "bg-green-600",
   },
   {
-    title: "Intern Web Developer",
-    description: "Membantu membangun website company profile dengan Next.js.",
-    duration: "Jan 2022 - Jul 2022",
-    icon: "🚀",
+    title: "Finance (Freelance) – Gerownies",
+    description: "Recorded and managed Gerownies’ cash flow in real time.",
+    duration: "Feb 2023 - Dec 2023",
+    icon: "💰",
+    color: "bg-yellow-500",
+  },
+  {
+    title: "Marketing Area FE (Freelance) – Gerownies",
+    description:
+      "Managed the sales team and successfully increased repeat orders and sales revenue.",
+    duration: "Mar 2022 - Dec 2022",
+    icon: "📈",
     color: "bg-pink-500",
   },
   {
-    title: "Freelance Developer",
-    description: "Membuat solusi e-commerce untuk klien kecil dan menengah.",
-    duration: "Mar 2021 - Des 2021",
-    icon: "💼",
-    color: "bg-green-500",
+    title: "Independent Study – Export School",
+    description:
+      "Studied export-import topics under the guidance of 15 experts alongside 1000 active participants.",
+    duration: "Feb 2024 - Jun 2024",
+    icon: "🌐",
+    color: "bg-indigo-500",
   },
   {
-    title: "Coding Mentor",
-    description: "Mengajar dasar-dasar pemrograman web untuk pemula.",
-    duration: "Sep 2020 - Feb 2021",
-    icon: "👨‍🏫",
-    color: "bg-yellow-500",
+    title: "Head of Media and Information Division",
+    description:
+      "Led the media team and maintained the division as the most active throughout the term.",
+    duration: "Jun 2022 - May 2023",
+    icon: "📣",
+    color: "bg-teal-500",
+  },
+  {
+    title: "Entrepreneurship Division Staff",
+    description:
+      "Analyzed product sales performance and contributed to improving business strategies.",
+    duration: "Feb 2023 - Dec 2023",
+    icon: "🛒",
+    color: "bg-orange-500",
+  },
+  {
+    title: "Creative and Information Staff – BEM FE UNNES",
+    description:
+      "Created designs and documented various student organization events and activities.",
+    duration: "Feb 2022 - Jan 2023",
+    icon: "🖌️",
+    color: "bg-red-500",
+  },
+  {
+    title: "PKKMB UNNES – Media Division Staff",
+    description:
+      "Designed event materials and acted as talent for the official short movie project.",
+    duration: "Jun 2023 - Aug 2023",
+    icon: "🎬",
+    color: "bg-cyan-600",
+  },
+  {
+    title: "Unnes Career Expo – Photographer Volunteer",
+    description:
+      "Documented the entire event series through photography and videography.",
+    duration: "2023",
+    icon: "📷",
+    color: "bg-gray-700",
+  },
+  {
+    title: "PKKMB FE – Discipline & Security Staff",
+    description:
+      "Created and enforced event rules for committee members and new students.",
+    duration: "2023",
+    icon: "🛡️",
+    color: "bg-lime-600",
   },
 ];
 
@@ -154,7 +206,7 @@ export default function Experienced() {
                       <motion.div
                         className={`h-2 rounded-full ${exp.color}`}
                         initial={{ width: 0 }}
-                        animate={{ width: `${(index + 1) * 20}%` }}
+                        animate={{ width: `${((index + 1) * 20, 100)}%` }}
                         transition={{ duration: 1, delay: 0.3 }}
                       ></motion.div>
                     </div>

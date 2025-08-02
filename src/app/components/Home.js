@@ -76,7 +76,7 @@ export default function Home() {
             transition={{ delay: 0.6 }}
           >
             <span className="text-sm text-gray-300 bg-gray-800/50 px-3 py-1 rounded-full mr-3 border border-gray-700">
-              Accounting Enthusiast
+              Accounting & Teaching Enthusiast
             </span>
             <div className="w-2 h-2 bg-pink-500 rounded-full animate-ping"></div>
           </motion.div>
@@ -87,13 +87,15 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            I&apos;m a fresh graduate from Universitas Negeri Semarang, Faculty of
-            Economics and Business, majoring in Accounting Education. During my
-            studies, I gained a strong understanding of financial principles,
-            accounting systems, and educational methodologies. I was actively
-            involved in both academic and organizational activities, which
-            helped me develop soft skills such as communication, teamwork, and
-            problem-solving.
+            I&apos;m a graduate of Accounting Education from Universitas Negeri
+            Semarang, class of 2025. Throughout my academic journey, I have
+            actively engaged in freelance work, allowing me to gain valuable
+            hands-on experience in various professional settings. I am a highly
+            motivated individual who is passionate about continuous learning and
+            self-improvement. I thrive in goal-oriented environments and possess
+            a strong commitment to achieving targets efficiently. In addition, I
+            am a collaborative team player who values open communication,
+            adaptability, and mutual support to ensure collective success.
           </motion.p>
 
           <motion.div
