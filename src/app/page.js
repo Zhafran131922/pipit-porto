@@ -163,7 +163,7 @@ export default function Page() {
                           Universitas Negeri Semarang
                         </h3>
                         <p className="text-blue-300 text-base md:text-lg">
-                          Bachelor of Accountancy
+                          Bachelor of Education in Accounting
                         </p>
 
                         <div className="flex flex-col md:flex-row items-start md:items-center mt-4">
