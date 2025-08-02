@@ -116,15 +116,20 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/6281328004641" // Ganti dengan nomor WhatsApp kamu
+              href="https://wa.me/6281328004641"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-green-500/20 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white group shadow-lg hover:shadow-green-500/20 group"
             >
-              <FaWhatsapp className="transition-transform group-hover:translate-y-0.5" />
-              Contact Me
+              <span className="absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-green-500 to-emerald-700 group-hover:from-green-600 group-hover:to-emerald-800 transition-all ">
+                <span className="block w-full h-full bg-gray-900 rounded-lg "></span>
+              </span>
+              <span className="relative z-10 flex items-center gap-2">
+                <FaWhatsapp className="transition-transform group-hover:translate-y-0.5" />
+                Contact Me
+              </span>
             </motion.a>
           </motion.div>
         </motion.div>
