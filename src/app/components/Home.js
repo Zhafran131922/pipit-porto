@@ -3,7 +3,7 @@
 
 import ProfileCard from "../ReactBits/ProfileCard";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { useRef } from "react";
 export default function Home() {
@@ -115,10 +115,17 @@ export default function Home() {
               Download CV
             </motion.a>
 
-            <motion.div
+            <motion.a
+              href="https://wa.me/6281328004641" // Ganti dengan nomor WhatsApp kamu
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-green-500/20 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            ></motion.div>
+            >
+              <FaWhatsapp className="transition-transform group-hover:translate-y-0.5" />
+              Contact Me
+            </motion.a>
           </motion.div>
         </motion.div>
 
@@ -148,32 +155,6 @@ export default function Home() {
       </div>
 
       {/* Social Media Icons with animations */}
-      {/* <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-6 backdrop-blur-sm bg-gray-900/50 px-6 py-3 rounded-full border border-gray-800"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2 }}
-      >
-        <span className="text-sm text-gray-400 mr-2 hidden sm:block">Find Me On</span>
-        <div className="flex space-x-4">
-          {[
-            { icon: <FaGithub />, color: "hover:text-purple-400" },
-            { icon: <FaLinkedinIn />, color: "hover:text-blue-400" },
-            { icon: <FaInstagram />, color: "hover:text-pink-400" },
-            { icon: <FaTwitter />, color: "hover:text-cyan-400" }
-          ].map((item, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              className={`text-gray-400 text-xl transition-colors duration-300 ${item.color}`}
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {item.icon}
-            </motion.a>
-          ))}
-        </div>
-      </motion.div> */}
 
       {/* Scroll indicator */}
       {/* <motion.div 
